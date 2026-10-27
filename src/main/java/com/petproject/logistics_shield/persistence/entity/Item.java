@@ -1,6 +1,8 @@
 package com.petproject.logistics_shield.persistence.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 import java.math.BigDecimal;
@@ -16,6 +18,7 @@ public class Item extends BaseEntity {
     private int quantity;
     private String category;
     private String serialNumber;
+    @Enumerated(EnumType.STRING) //wrong column type encountered in column
     private ItemStatus status;
     private LocalDate expirationDate; //for medicaments
 
