@@ -16,3 +16,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+
+  main:
+    banner-mode: OFF
